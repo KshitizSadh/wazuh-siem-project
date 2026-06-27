@@ -16,6 +16,7 @@ Before you begin, verify the following:
 - [ ] Port 443, 1514, 1515, 9200 are not blocked by a firewall
 
 ---
+<img width="1917" height="1122" alt="image" src="https://github.com/user-attachments/assets/2114bc5c-31c3-4eec-87ff-be4810e1efee" />
 
 ## Step 1: System Preparation
 
@@ -30,6 +31,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 **Expected output:** A list of packages being updated, ending with "0 upgraded, 0 newly installed..." or similar.
 
 **Why this matters:** Running outdated packages can cause the Wazuh installer to fail when it tries to install its own dependencies.
+<img width="1151" height="733" alt="image" src="https://github.com/user-attachments/assets/50c864c7-ce9d-4d7f-ad8b-d8bb7cfe8e0f" />
 
 ---
 
@@ -48,16 +50,8 @@ hostnamectl
 ```
 
 **Expected output:**
-```
-   Static hostname: wazuh-server
-         Icon name: computer-vm
-           Chassis: vm
-        Machine ID: ...
-           Boot ID: ...
-  Operating System: Ubuntu 22.04.3 LTS
-            Kernel: Linux 5.15.0-...
-      Architecture: x86-64
-```
+<img width="785" height="390" alt="image" src="https://github.com/user-attachments/assets/5fbd49af-bc9a-49d4-86e6-14b10dc2863c" />
+
 
 ---
 
@@ -81,11 +75,8 @@ free -h
 
 **Expected output:** The `Swap:` line should show `0B`.
 
-```
-               total        used        free      shared  buff/cache   available
-Mem:           7.8Gi       ...
-Swap:            0B          0B          0B
-```
+<img width="1096" height="161" alt="image" src="https://github.com/user-attachments/assets/6184d35d-66fd-43e0-9fc1-4c81c5a0f307" />
+
 
 ---
 
@@ -117,17 +108,10 @@ sudo ufw status
 ```
 
 **Expected output:**
-```
-Status: active
 
-To                         Action      From
---                         ------      ----
-22/tcp                     ALLOW       Anywhere
-443/tcp                    ALLOW       Anywhere
-1514/tcp                   ALLOW       Anywhere
-1515/tcp                   ALLOW       Anywhere
-9200/tcp                   ALLOW       Anywhere
-```
+<img width="682" height="362" alt="image" src="https://github.com/user-attachments/assets/b7a5caac-2612-4995-99c3-7c53c62a201c" />
+
+
 
 > ⚠️ **Common Mistake:** Forgetting to allow port 1514 before starting the agents. This is the #1 cause of agents failing to connect.
 
